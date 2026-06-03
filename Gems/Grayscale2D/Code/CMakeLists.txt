@@ -35,6 +35,8 @@ ly_add_target(
             AZ::AzCore
             AZ::AzFramework
             Gem::${gem_name}.API
+            Gem::Atom_RPI.Public
+            Gem::Atom_Bootstrap.Headers
 )
 
 # Shared/monolithic module target (loaded at runtime)

@@ -22,6 +22,7 @@
     "documentation_url": "",
     "dependencies": [
         "Atom_RPI",
+        "Atom_Bootstrap",
         "LyShine"
     ]
 }
