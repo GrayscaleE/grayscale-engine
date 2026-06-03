@@ -5,19 +5,21 @@
  * SPDX-License-Identifier: Apache-2.0 OR MIT
  */
 
-#include "Grayscale2DSystemComponent.h"
+#include <AzCore/Memory/SystemAllocator.h>
+#include <AzCore/Module/Module.h>
 
-#include <IGem.h>
+#include "Grayscale2DSystemComponent.h"
 
 namespace Grayscale2D
 {
-    class Grayscale2DModule : public CryHooksModule
+    class Grayscale2DModule : public AZ::Module
     {
     public:
-        AZ_RTTI(Grayscale2DModule, "{B1C2D3E4-F5A6-7890-BCDE-F01234567891}", CryHooksModule);
+        AZ_RTTI(Grayscale2DModule, "{B1C2D3E4-F5A6-7890-BCDE-F01234567891}", AZ::Module);
+        AZ_CLASS_ALLOCATOR(Grayscale2DModule, AZ::SystemAllocator);
 
         Grayscale2DModule()
-            : CryHooksModule()
+            : AZ::Module()
         {
             m_descriptors.insert(m_descriptors.end(), {
                 Grayscale2DSystemComponent::CreateDescriptor(),

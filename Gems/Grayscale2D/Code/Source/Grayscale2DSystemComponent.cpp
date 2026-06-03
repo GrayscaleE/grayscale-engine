@@ -12,6 +12,7 @@
 #include <AzCore/Serialization/EditContext.h>
 
 #include <Atom/RPI.Public/Image/StreamingImage.h>
+#include <Atom/RPI.Public/ViewportContext.h>
 #include <Atom/RHI/RHIUtils.h>
 
 #include <AzFramework/Asset/AssetCatalogBus.h>
